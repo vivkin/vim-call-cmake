@@ -1,7 +1,7 @@
 vim-call-cmake
 ==============
 
-Create out of source build dir, call cmake and set makeprg variable
+Create out of source build dir, call cmake and set `makeprg` variable
 
 ## Installation
 
@@ -12,14 +12,14 @@ then simply copy and paste:
     cd ~/.vim/bundle
     git clone git://github.com/vivkin/vim-call-cmake.git
 
-(Thanks Tim Pope for pathogen.vim and this copy-pasted part of useless README)
+(Thanks [Tim Pope](https://github.com/tpope) for pathogen.vim and this copy-pasted part of useless README)
 
 ## Usage
 
 Set current directory which contains root CMakeLists.txt and run `:CMake` with any number of arguments.
-Variable `g:cmake_build_dir` holds name of build directory (`build/` by default).
+Variable `g:cmake_build_dir` holds name of the build directory (`build/` by default).
 Also avaliable shortcuts for debug `:CMakeDebug` and release `:CMakeRelease` builds.
 
 ## License
 
-See `:help license`
+As Vim itself. See `:help license`.
