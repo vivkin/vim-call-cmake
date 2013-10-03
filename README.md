@@ -16,6 +16,5 @@ then simply copy and paste:
 
 ## Usage
 
-Set current directory which contains root CMakeLists.txt and run `CMake` with any number of arguments.
+Set current directory which contains root CMakeLists.txt and run `CMake` with any number of arguments. Variable `g:cmake_build_dir` holds name of build directory. By default is `build/`
 Also avaliable shortcuts for debug `CMakeDebug` and release `CMakeRelease` builds.
-`g:cmake_build_dir` holds name of build directory and by default equals `build/`
