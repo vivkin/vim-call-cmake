@@ -22,4 +22,4 @@ Also avaliable shortcuts for debug `:CMakeDebug` and release `:CMakeRelease` bui
 
 ## License
 
-See `help license`
+See `:help license`
