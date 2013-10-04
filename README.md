@@ -10,9 +10,9 @@ installing [pathogen.vim](https://github.com/tpope/vim-pathogen), and
 then simply copy and paste:
 
     cd ~/.vim/bundle
-    git clone git://github.com/vivkin/vim-call-cmake.git
+    git clone https://github.com/vivkin/vim-call-cmake.git
 
-(Thanks [Tim Pope](https://github.com/tpope) for pathogen.vim and this copy-pasted part of useless README)
+(Thanks [Tim Pope](https://github.com/tpope) for pathogen.vim and this copy-pasted part of README)
 
 ## Usage
 
