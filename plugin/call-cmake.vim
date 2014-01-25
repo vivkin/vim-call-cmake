@@ -14,6 +14,10 @@ if !exists("g:cmake_build_dir")
 	let g:cmake_build_dir = 'build/'
 endif
 
+if !exists("g:cmake_build_args")
+	let g:cmake_build_args = '-j 8'
+endif
+
 function! s:CMake(build_dir, ...)
 	if filereadable("CMakeLists.txt")
 		if !isdirectory(a:build_dir)
@@ -24,7 +28,7 @@ function! s:CMake(build_dir, ...)
 		execute '!(cd ' . fnameescape(a:build_dir) . ' && cmake ' . join(a:000) . ' ..)'
 		if v:shell_error == 0
 			let g:cmake_build_dir = a:build_dir
-			let &makeprg = 'cmake --build ' . g:cmake_build_dir . ' --target'
+			let &makeprg = 'cmake --build ' . g:cmake_build_dir . ' -- ' . g:cmake_build_args
 		endif
 	else
 		echoerr 'CMakeLists.txt not found'
