@@ -15,7 +15,7 @@ if !exists("g:cmake_build_dir")
 endif
 
 if !exists("g:cmake_build_args")
-	let g:cmake_build_args = '-j 8'
+	let g:cmake_build_args = '-j 4'
 endif
 
 function! s:CMake(build_dir, ...)
