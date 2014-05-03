@@ -35,10 +35,18 @@ function! s:CMake(build_dir, ...)
 	endif
 endfunction
 
+function! s:CMakeHelp(command)
+	execute 'vnew'
+	execute 'read !cmake --help-command ' . a:command
+	set nomodified
+	set readonly
+endfunction
+
 if !exists(":CMake")
 	command! -nargs=* CMake call s:CMake(g:cmake_build_dir, <f-args>)
 	command! -nargs=* CMakeDebug call s:CMake('debug/', '-DCMAKE_BUILD_TYPE=Debug', <f-args>)
 	command! -nargs=* CMakeRelease call s:CMake('release/', '-DCMAKE_BUILD_TYPE=Release', <f-args>)
+	command! -nargs=1 CMakeHelp call s:CMakeHelp(<f-args>)
 endif
 
 let &cpo = s:save_cpo
