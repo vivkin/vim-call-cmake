@@ -15,7 +15,7 @@ if !exists("g:cmake_build_dir")
 endif
 
 if !exists("g:cmake_build_args")
-	let g:cmake_build_args = '-j ' . system('getconf _NPROCESSORS_ONLN')
+	let g:cmake_build_args = '-j ' . substitute(system('getconf _NPROCESSORS_ONLN'), '\n', '', 'g')
 endif
 
 function! s:CMake(build_dir, ...)
